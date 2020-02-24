@@ -6,16 +6,19 @@ import java.util.Scanner;
 public class GroceryDiscount2 {
 
 	public static void main(String[] args) {
-		Scanner keyboard = new Scanner(System.in);
-		DecimalFormat df = new DecimalFormat("0.00");
 		
 		boolean outcome = true;
 		double discount;
 		
 		while (outcome == true){
-		
+			Scanner keyboard = new Scanner(System.in);
+			DecimalFormat df = new DecimalFormat("0.00");
+			
 			System.out.println("Please enter the cost of your groceries or '0' to quit: ");
-			double cost = keyboard.nextDouble();
+			double cost = -1;
+			if(keyboard.hasNextDouble()) {
+				cost=keyboard.nextDouble();
+			}
 				
 					
 					if((cost<10 && cost>0) || cost>1000 || cost<0) {

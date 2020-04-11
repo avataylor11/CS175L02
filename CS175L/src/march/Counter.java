@@ -19,7 +19,14 @@ public class Counter {
 	public void reset() {
 		value = 0;
 	}
-
+	
+	public void clickMany(int val) {
+		value = value + val;
+	}
+	
+	public void unclickMany(int val) {
+		value = value - val;
+	}
 	
 
 }
